@@ -124,7 +124,8 @@ private:
 public:
     TT(int numLevels, const vector<int>& quanta, const vector<int>& aging)
         : timeQuantum(quanta), agingThreshold(aging) {
-        queues.resize(3);
+
+        queues.resize(3);// 3 process types
         for (auto& typeQueues : queues)
             typeQueues.resize(numLevels);
     }
